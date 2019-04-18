@@ -12,7 +12,7 @@ export default class Main extends Component {
         event.preventDefault();
 
         const response = await api.post('/boxes', {
-            title: this.state.newBow
+            title: this.state.newBox,
         });
         
         console.log(response.data);
@@ -25,11 +25,11 @@ export default class Main extends Component {
     render() {
         return (
            <div className="container">
-                <div>
-                    <form onSubmit={this.HandleSubmit} action="" >
-                        <img className="logo" src={logo} alt="logo"/>
-                        <input className="input" placeholder="Criar uma Box" value={this.state.newBox} onChange={this.HandleInputChange}/>
-                        <button className="button button-purple">Teste</button>     
+                <div className="formBox">
+                    <form onSubmit={this.HandleSubmit} action="" >                                               
+                        <img className="logo" src={logo} alt="logo"/>                        
+                        <input className="input" placeholder="Criar uma Box" value={this.state.newBox} onChange={this.HandleInputChange}/>                                             
+                        <button className="button button-purple">Teste</button>                                           
                     </form> 
                 </div>
            </div>

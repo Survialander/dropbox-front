@@ -8,12 +8,16 @@
 .logo{
     width: 150px;
     height: 150px;
+    margin-bottom: 10px;
     align-self: center;
 }
 
 .container form{
-    margin-top: 70%;
-    width: 300px;
+    margin-top: 30%;
+    width: 500px;
+    border: 1px dashed grey;
+    border-radius: 3px;
+    padding: 100px;
     display: flex;
     flex-direction: column;
 }
@@ -64,15 +68,13 @@
     background-clip: padding-box;
     border: 1px solid #949597a4;
     border-radius: 4px;
-    -webkit-transition: border-color 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;
-    transition: border-color 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;
-    transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
-    transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;
+    transition: 0.5s;
 }
 .input:focus{
     box-shadow: none !important;
     outline-offset: -2px;
-    color: #495057;
+    color: #615cac;
+    border: 1px solid;
     background-color: #fff;
     border-color: #9c97da;
     outline: 0;
