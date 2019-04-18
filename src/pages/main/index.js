@@ -1,6 +1,6 @@
 import React, { Component } from  'react';
 import './style.css';
-import logo from '../../assets/parachute-box.png';
+import logo from '../../assets/box.svg';
 import api from '../../services/api';
 
 export default class Main extends Component {
@@ -15,6 +15,7 @@ export default class Main extends Component {
             title: this.state.newBox,
         });
         
+        this.props.history.push(`/boxes/${response.data._id}`);
         console.log(response.data);
     };
 
@@ -23,16 +24,32 @@ export default class Main extends Component {
     };
 
     render() {
-        return (
-           <div className="container">
-                <div className="formBox">
-                    <form onSubmit={this.HandleSubmit} action="" >                                               
-                        <img className="logo" src={logo} alt="logo"/>                        
-                        <input className="input" placeholder="Criar uma Box" value={this.state.newBox} onChange={this.HandleInputChange}/>                                             
-                        <button className="button button-purple">Teste</button>                                           
-                    </form> 
+        return(  
+        <div className="area">  
+            <ul class="circles"> 
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li> 
+                
+                <div className="container">                    
+                    <div className="formBox">
+                        <form onSubmit={this.HandleSubmit} action="">                                               
+                            <img src={logo} className="logo" alt="logo" />                      
+                            <input className="input" placeholder="Criar uma Box" value={this.state.newBox} onChange={this.HandleInputChange}/>                                             
+                            <button className="button button-purple">CreateBox</button>                                         
+                        </form>        
+                    </div>        
                 </div>
-           </div>
+
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>  
+            </ul>
+        </div>
         );
     }
 }
