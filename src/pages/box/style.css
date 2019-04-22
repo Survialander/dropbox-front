@@ -42,6 +42,7 @@ body {
 .itemList{
     color: black;
     overflow: hidden;
+    margin-top: 4px;
     border: 1px solid grey;
     border-radius: 5px;
     height: 50px;
@@ -50,7 +51,7 @@ body {
 }
 li div{
     height: 48px;
-    margin: 14px;
+    margin: 15px;
 }
 
 ul span{
