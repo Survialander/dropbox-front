@@ -1,0 +1,70 @@
+body {
+    background: linear-gradient(90deg, rgb(108, 9, 201) 20px, transparent 1%) center, linear-gradient(rgba(100, 13, 199, 0.863) 20px, transparent 1%) center, rgb(94, 56, 232);
+    background-size: 22px 22px;
+    color: #ffff;
+  }
+
+.header{
+    display: flex;
+    height: 40px;
+    margin-top: 5%;
+    margin-bottom: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoHeader{
+    width: 36px;
+    height: 36px;
+    border-right: 2px solid black;
+    margin-right: 4px;
+}
+
+.boxContainer{
+    height: 100%;
+    margin: 0;
+}
+
+.list{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    list-style: none;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 10px;
+    background-color: #ffff;
+}
+
+.itemList{
+    color: black;
+    padding: 15px;
+    margin: 10px;
+    overflow: hidden;
+    border: 1px solid grey;
+    border-radius: 5px;
+    height: 50px;
+    width: 95%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ul span{
+    display: flex;
+    align-self: flex-start;
+    margin-bottom: 5px;
+    color:black;
+}
+
+.itemList span{
+    float: right;
+}
+
+a * {
+    padding-right: 20px;
+} 
+a:link{
+    text-decoration: none;
+}
