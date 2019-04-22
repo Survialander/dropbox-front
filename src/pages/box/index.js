@@ -28,7 +28,7 @@ export default class Main extends Component {
 
                 <ul className="list">
                 <span>Arquivos:</span>
-                {this.state.box.files && (
+                {!this.state.box.files && (
                     <li className="itemList">
                         <p>Não existem arquivos gravados na Box: <strong>{this.state.box.title}</strong></p>
                     </li>
@@ -38,7 +38,7 @@ export default class Main extends Component {
                     <li className="itemList">
                         <div>
                             <a href={files.url}>
-                            <i class="fas fa-file"></i>
+                            <i className="fas fa-file"></i>
                             <strong>{files.title}</strong>                           
                             </a> 
                             <span>date</span>
