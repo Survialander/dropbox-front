@@ -27,7 +27,7 @@ export default class Main extends Component {
                 </header>
 
                 <ul className="list">
-                <span>Arquivos:</span>
+                <span className="spanArquivos">Arquivos:</span>
                 {!this.state.box.files && (
                     <li className="itemList">
                         <p>Não existem arquivos gravados na Box: <strong>{this.state.box.title}</strong></p>
