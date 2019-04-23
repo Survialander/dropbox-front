@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: "https://droppbox-back.herokuapp.com/"
+    baseURL: "https://dropp-box-back.herokuapp.com/"
 });
 
 export default api;
