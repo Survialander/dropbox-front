@@ -44,7 +44,7 @@ export default class Main extends Component {
                             })}</span>
                         </div>
                     </li>
-                )) }      
+                ))}      
                 
                 {!this.state.box.files && (
                     <li className="itemList">
