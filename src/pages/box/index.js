@@ -3,6 +3,8 @@ import React, { Component } from  'react';
 import logo from '../../assets/box.svg'
 import './style.css';
 import api from '../../services/api';
+import { distanceInWords } from 'date-fns';
+import pt from 'date-fns/locale/pt';
 // import logo from '../../assets/parachute-box.png';
 // import api from '../../services/api';
 
@@ -12,8 +14,8 @@ export default class Main extends Component {
     }
     
     async componentDidMount(){
-        const caixa = this.props.match.params.id;
-        const response = await api.get(`/boxes/${caixa}`);
+        const box = this.props.match.params.id;
+        const response = await api.get(`/boxes/${box}`);
         
         this.setState({box: response.data});
     }
@@ -28,23 +30,27 @@ export default class Main extends Component {
 
                 <ul className="list">
                 <span className="spanArquivos">Arquivos:</span>
+                
+                {this.state.box.files && this.state.box.files.map(files => (
+                    <li className="itemList">
+                        <div>
+                            <a href={files.url} target="blank">
+                            <i className="fas fa-file"></i>
+                            <strong>{files.title}</strong>                           
+                            </a> 
+                            <span>há { " " }
+                            {distanceInWords(files.createdAt, new Date(), {
+                                locale: pt
+                            })}</span>
+                        </div>
+                    </li>
+                )) }      
+                
                 {!this.state.box.files && (
                     <li className="itemList">
                         <p>Não existem arquivos gravados na Box: <strong>{this.state.box.title}</strong></p>
                     </li>
-                )}
-
-                {this.state.box.files && this.state.box.files.map(files => (
-                    <li className="itemList">
-                        <div>
-                            <a href={files.url}>
-                            <i className="fas fa-file"></i>
-                            <strong>{files.title}</strong>                           
-                            </a> 
-                            <span>date</span>
-                        </div>
-                    </li>
-                )) }                              
+                )}                      
                 </ul>
             </div>
         );
