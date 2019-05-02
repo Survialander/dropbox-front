@@ -2,6 +2,8 @@ body {
     background: linear-gradient(90deg, rgb(108, 9, 201) 20px, transparent 1%) center, linear-gradient(rgba(100, 13, 199, 0.863) 20px, transparent 1%) center, rgb(94, 56, 232);
     background-size: 22px 22px;
     color: #ffff;
+    align-items: center;
+    justify-content: center;
   }
 
 .header{
@@ -80,4 +82,17 @@ a:link:hover{
 
 a i{
     color: blueviolet;
+}
+.upload{ 
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    background-color: rgb(243, 241, 241);
+    color: rgb(82, 72, 72);
+    height: 150px;
+    margin-bottom: 20px; 
+    border: 1px solid black;
+    border-radius: 4px;    
 }

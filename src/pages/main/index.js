@@ -26,7 +26,7 @@ export default class Main extends Component {
     render() {
         return(  
         <div className="area">  
-            <ul class="circles"> 
+            <ul className="circles"> 
                 <li></li>
                 <li></li>
                 <li></li>
