@@ -26,11 +26,11 @@ export default class Main extends Component {
 
     NewFile = () => {
         const box = this.props.match.params.id;
-        const io = socket('https://dropp-box-back.herokuapp.com');
+        const io = socket('https://dropbox-backen.herokuapp.com/');
 
         io.emit('connectRoom', box);
         
-        io.on('arquivo', data => {
+        io.on('file', data => {
             this.setState({ box: {...this.state.box, files: [data, ...this.state.box.files]} })
         })
     };
