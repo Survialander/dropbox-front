@@ -65,12 +65,6 @@ export default class Main extends Component {
 
                 <ul className="list">
                 <span className="spanArquivos">Arquivos:</span>
-                
-                {!this.state.box.files && (
-                    <li className="itemList">
-                        <p>Não existem arquivos gravados na Box: <strong>{this.state.box.title}</strong></p>
-                    </li>
-                )} 
 
                 {this.state.box.files && this.state.box.files.map(files => (
                     <li className="itemList" key={files._id}>
